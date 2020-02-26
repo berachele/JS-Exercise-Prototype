@@ -86,10 +86,10 @@ function Baby() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1.  Global Binding - Global is what 'this' will point towards when you it isn't pointed anywhere--this will return ALL of the code so it is a lot of info--we want to avoid doing this.
+  2. Implicit Binding - when 'this' is used, the rule is that whatever is left of the dot, is what 'this' is referring to
+  3. New Binding - We use constructor functions with new binding because we call a new function using the same information for broads of data
+  4. Explicit Binding - Call, Apply and Bind methods--we explicitly use them outside the code to bind variables together so that we can call then just on a new variable
 */
 
 
