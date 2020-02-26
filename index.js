@@ -81,13 +81,19 @@ Car.prototype.fill = function(gallons){
 }
 /*
   TASK 3
-    - Write a Baby constructor subclassing Person.
-    - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.
-    - Besides the methods on Person.prototype, babies have the ability to `.play()`:
-        + Should return a string "Playing with x", x being the favorite toy.
+    - Write a Baby constructor subclassing Person.✅??
+    - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.✅
+    - Besides the methods on Person.prototype, babies have the ability to `.play()`:✅
+        + Should return a string "Playing with x", x being the favorite toy.✅
 */
-function Baby() {
+function Baby(name, age, favoriteToy) {
+Person.call(this, name, age, favoriteToy) //connect baby to person
+this.favoriteToy = favoriteToy;
+}
+Baby.prototype = Object.create(Person.prototype);//letting child know its connected to person
 
+Baby.prototype.play = function(){
+return `Playing with ${this.favoriteToy}`;
 }
 
 /* 
